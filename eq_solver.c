@@ -26,7 +26,7 @@ int main() {
     switch (num)
     {
     case 0:
-        printf("There is no roots\n");
+        printf("There are no roots\n");
         break;
     case 1:
         printf("There is 1 root: x = %.4f\n", x1);
@@ -35,7 +35,7 @@ int main() {
         printf("There are 2 roots: x1 = %.4f, x2 = %.4f\n", x1, x2);
         break;
     case INF_NUM:
-        printf("There is an infinite amount of roots\n");
+        printf("There are an infinite amount of roots\n");
         break;
     default:
         break;
