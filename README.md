@@ -1,1 +1,1 @@
-Some information
+Solves quadratic equation, that's all(
