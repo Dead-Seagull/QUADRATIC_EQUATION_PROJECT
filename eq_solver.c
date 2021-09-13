@@ -69,6 +69,7 @@ void single_test() {
         printf("There are an infinite amount of roots\n");
         break;
     default:
+        printf("Impossible situation!");
         break;
     }
 }
