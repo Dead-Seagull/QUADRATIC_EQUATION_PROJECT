@@ -4,7 +4,6 @@
 #define INF_NUM 3
 
 int eq_solver(double a, double b, double c, double* x1, double* x2);
-void unit_test();
 void single_test();
 
 int main() {
@@ -37,10 +36,6 @@ int eq_solver(double a, double b, double c, double* x1, double* x2) {
             return 0;
         }
     }
-}
-
-void unit_test() {
-    
 }
 
 void single_test() {
