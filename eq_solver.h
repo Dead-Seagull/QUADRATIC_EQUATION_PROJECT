@@ -1,25 +1,29 @@
-/// Коды сообщений, возвращаемые функцией eq_solver
+/// Codes, returned by eq_solver function
 enum CODES {
-    ZERO_ROOTS = 0, ///< Указывает, что квадратное уравнение не имеет действительных решений
-    ONE_ROOT = 1, ///< Указывает, что квадратное уравнение имеет кратный действительный корень
-    TWO_ROOTS = 2, ///< Указывает, что квадратное уравнение имеет два различных действительных корня
-    INF_ROOTS = 3, ///< Указывает, что квадратное уравнение имеет бесконечно много корней (вырожденый случай)
-    NULL_PTR_ERR = 5, ///< Указывает, что функция получила в качестве аргумента нулевой указатель
-    EQ_PTR_ERR = 6, ///< Указывает, что функция получила одинаковые указатели
-    INCORRECT_COEFF_ERR = 7, ///< Указывает, что функция получила некорректные коэффициенты
+    ZERO_ROOTS = 0,          ///< There are no real solutions
+    ONE_ROOT = 1,            ///< One real solution
+    TWO_ROOTS = 2,           ///< Two real solutions
+    INF_ROOTS = 3,           ///< Infinitely many roots (a = b = c = 0 case)
+    NULL_PTR_ERR = 5,        ///< function got null pointer as argument
+    EQ_PTR_ERR = 6,          ///< function got same pointers
+    INCORRECT_COEFF_ERR = 7, ///< function got incorrect coefficients
 };
 
 /*!
-Решает квадратное уравнение
-\param[in] a, b, c Коэффициенты квадратного уравнения ax^2+bx+c=0
-\param[out] x1, x2 Указатели на переменные, содержащие корни квадратного уравнения
-\return Количество корней квадратного уравнения или код возникшей ошибки
+Solves quadratic equation ax^2 + bx + c = 0
+
+\param[in]     a, b, c Coefficients
+\param[out]    x1, x2 Pointers to the roots
+
+\return Number of root or code of the error
 */
 int eq_solver(double a, double b, double c, double* x1, double* x2);
 
 /*!
-Решает линейное уравнение
-\param[in] b, c Коэффициенты линейного уравнения bx+c=0
-\return Решение линейного уравнения
+Solves linear equation bx + c = 0
+
+\param[in]     b, c Coefficients
+
+\return Solution
 */
 double lin_eq_solver(double b, double c);
