@@ -10,7 +10,7 @@ void eq_test(double a, double b, double c, int test_num) {
             printf("There are no roots!\n");
             break;
         case ONE_ROOT:
-            printf("x = %lf\n", x1);
+            printf("x = %lf\n", x1); // %.5lf - точность 5 знаков после запятой
             break;
         case TWO_ROOTS:
             printf("x1 = %lf\n", x1);
@@ -36,7 +36,7 @@ void eq_test(double a, double b, double c, int test_num) {
 }
 
 void unit_eq_test() {
-    eq_test(1, 12, 1, 1);
+    eq_test(1, 2, 1, 1);
     eq_test(-1, 11, 2, 2);
     eq_test(1, 10, 3, 3);
     eq_test(-1, 9, 4, 4);
